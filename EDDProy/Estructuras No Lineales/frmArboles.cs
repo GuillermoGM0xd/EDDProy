@@ -178,5 +178,10 @@ namespace EDDemo.Estructuras_No_Lineales
             int valor = int.Parse(txtBuscar.Text);
             miArbol.MostrarBuqueda(valor);
         }
+
+        private void Eliminar(object sender, EventArgs e)
+        {
+
+        }
     }
 }
