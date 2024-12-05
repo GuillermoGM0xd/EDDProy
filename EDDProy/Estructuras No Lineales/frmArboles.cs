@@ -26,6 +26,7 @@ namespace EDDemo.Estructuras_No_Lineales
         ArbolBusqueda miArbol;
         NodoBinario miRaiz;
         private object txtBuscar;
+        private object txtValor;
 
         public frmArboles()
         {
@@ -173,13 +174,43 @@ namespace EDDemo.Estructuras_No_Lineales
 
             txtDato.Text = "";
         }
-        private void btnBusqueda_Click(object sender, EventArgs e)
+
+        private void btnEliminarPredecesor_Click(object sender, EventArgs e)
+        {
+            int valor;
+            if (int.TryParse(txtValor.Text, out valor))
+            {
+                Arbol.EliminarPredecesor(valor);
+                MessageBox.Show("Predecesor eliminado.");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido.");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             int valor = int.Parse(txtBuscar.Text);
             miArbol.MostrarBuqueda(valor);
         }
 
-        private void Eliminar(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmArboles_Load(object sender, EventArgs e)
         {
 
         }

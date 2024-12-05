@@ -46,5 +46,15 @@ namespace EDDemo
             mArboles.MdiParent = this;
             mArboles.Show();
         }
+
+        private void simplesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void recursiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -259,7 +259,7 @@ namespace EDDemo.Estructuras_No_Lineales
         }
     
 
-    public bool busqueda(int valor)
+    public bool Busqueda(int valor)
             {
             return busqueda(Raiz, valor);
         }
@@ -285,7 +285,7 @@ namespace EDDemo.Estructuras_No_Lineales
 
         public void MostrarBuqueda(int valor)
         {
-            bool encontrado = busqueda(valor);
+            bool encontrado = Busqueda(valor);
             if (encontrado)
             {
                 MessageBox.Show($"El {valor} SI se encuentra en el arbol");
