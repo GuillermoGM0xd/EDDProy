@@ -25,8 +25,6 @@ namespace EDDemo.Estructuras_No_Lineales
     {
         ArbolBusqueda miArbol;
         NodoBinario miRaiz;
-        private object txtBuscar;
-        private object txtValor;
 
         public frmArboles()
         {
@@ -35,27 +33,28 @@ namespace EDDemo.Estructuras_No_Lineales
             miRaiz = null;
         }
 
+
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-
-            //Obtenemos el nodo Raiz del arbol
+            int valor = int.Parse(txtDato.Text);
             miRaiz = miArbol.RegresaRaiz();
 
-            //Limpiamos la cadena donde se concatenan los nodos del arbol 
+            if (miArbol.ExisteNodo(valor, miRaiz))
+            {
+                MessageBox.Show("El nodo ya existe en el árbol.");
+                txtDato.Text = "";
+                return;
+            }
+
+            // Limpiar `strArbol` antes de agregar y mostrar
             miArbol.strArbol = "";
-
-            //Se inserta el nodo con el dato capturado
-            miArbol.InsertaNodo(int.Parse(txtDato.Text),
-                                ref miRaiz);
-
-            //Leer arbol completo y mostrarlo en caja de texto
+            miArbol.InsertaNodo(valor, ref miRaiz);
             miArbol.MuestraArbolAcostado(1, miRaiz);
             txtArbol.Text = miArbol.strArbol;
-            
-            txtDato.Text = "";
 
- 
+            txtDato.Text = "";
         }
+
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -147,70 +146,281 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btnCrearArbol_Click(object sender, EventArgs e)
         {
-            //Limpiamos los objetos y clases del anterior arbol
-            miArbol = null;
-            miRaiz = null;
+            // Limpiar el árbol anterior
             miArbol = new ArbolBusqueda();
             txtArbol.Text = "";
             txtDato.Text = "";
-             
             miArbol.strArbol = "";
 
             Random rnd = new Random();
+            miRaiz = miArbol.RegresaRaiz();  // Obtener la raíz inicial solo una vez
 
-            for (int nNodos =1; nNodos <= txtNodos.Value; nNodos++)
+            for (int nNodos = 1; nNodos <= txtNodos.Value; nNodos++)
             {
                 int Dato = rnd.Next(1, 100);
-                //Obtenemos el nodo Raiz del arbol
-                miRaiz = miArbol.RegresaRaiz();
 
-                //Se inserta el nodo con el dato capturado
-                miArbol.InsertaNodo(Dato, ref miRaiz);
+                // Verificar si el dato ya existe en el árbol antes de insertarlo
+                if (!miArbol.ExisteNodo(Dato, miRaiz))
+                {
+                    // Si no existe, insertar el nodo con el dato generado
+                    miArbol.InsertaNodo(Dato, ref miRaiz);
+                }
+                else
+                {
+                    // Si el nodo ya existe, reducir nNodos para mantener el mismo número total de nodos
+                    nNodos--;
+                }
             }
 
-            //Leer arbol completo y mostrarlo en caja de texto
+            // Leer el árbol completo y mostrarlo en la caja de texto
             miArbol.MuestraArbolAcostado(1, miRaiz);
             txtArbol.Text = miArbol.strArbol;
 
             txtDato.Text = "";
         }
 
-        private void btnEliminarPredecesor_Click(object sender, EventArgs e)
+        private void frmArboles_Load(object sender, EventArgs e)
         {
-            int valor;
-            if (int.TryParse(txtValor.Text, out valor))
+
+        }
+
+        private void btnBuscar_Click1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDato.Text))
             {
-                Arbol.EliminarPredecesor(valor);
-                MessageBox.Show("Predecesor eliminado.");
+                MessageBox.Show("Por favor ingresa un valor para buscar.");
+                return;
+            }
+
+            int valor = int.Parse(txtDato.Text);
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío");
+                return;
+            }
+
+            bool encontrado = miArbol.ExisteNodo(valor, miRaiz);
+
+            if (encontrado)
+            {
+                MessageBox.Show("Se ha encontrado el dato: " + valor);
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un número válido.");
+                MessageBox.Show("Valor no encontrado");
             }
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            txtDato.Text = "";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int valor = int.Parse(txtBuscar.Text);
-            miArbol.MostrarBuqueda(valor);
+            if (string.IsNullOrEmpty(txtDato.Text))
+            {
+                MessageBox.Show("Por favor ingresa un valor para buscar.");
+                return;
+            }
+
+            int valor = int.Parse(txtDato.Text);
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío");
+                return;
+            }
+
+            bool encontrado = miArbol.ExisteNodo(valor, miRaiz);
+
+            if (encontrado)
+            {
+                MessageBox.Show("Se ha encontrado el dato: " + valor);
+            }
+            else
+            {
+                MessageBox.Show("Valor no encontrado");
+            }
+
+            txtDato.Text = "";
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnElmarb_Click(object sender, EventArgs e)
         {
+            miRaiz = miArbol.RegresaRaiz();
 
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío");
+                return;
+            }
+
+            // Podar el árbol
+            miArbol.podarArbol(ref miRaiz);
+
+            // Actualizar visualización en la interfaz
+            txtArbol.Text = "";
+            lblRecorridoPreOrden.Text = "";
+            lblRecorridoInOrden.Text = "";
+            lblRecorridoPostOrden.Text = "";
+
+            MessageBox.Show("El árbol ha sido podado.");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPrd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtDato.Text))
+            {
+                MessageBox.Show("Por favor, ingresa un valor para eliminar.");
+                return;
+            }
 
+            int valor = int.Parse(txtDato.Text);
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío");
+                return;
+            }
+
+            bool eliminado = miArbol.EliminarNodoConPredecesor(valor, ref miRaiz);
+
+            if (eliminado)
+            {
+                MessageBox.Show("Nodo eliminado usando el predecesor: " + valor);
+                miArbol.strArbol = "";
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbol.Text = miArbol.strArbol;
+            }
+            else
+            {
+                MessageBox.Show("Valor no encontrado en el árbol");
+            }
         }
 
-        private void frmArboles_Load(object sender, EventArgs e)
+        private void btnSuce_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDato.Text))
+            {
+                MessageBox.Show("Por favor, ingresa un valor para eliminar.");
+                return;
+            }
+
+            int valor = int.Parse(txtDato.Text);
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío");
+                return;
+            }
+
+            bool eliminado = miArbol.EliminarNodoConSucesor(valor, ref miRaiz);
+
+            if (eliminado)
+            {
+                MessageBox.Show("Nodo eliminado usando el sucesor: " + valor);
+                miArbol.strArbol = "";
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbol.Text = miArbol.strArbol;
+            }
+            else
+            {
+                MessageBox.Show("Valor no encontrado en el árbol");
+            }
+        }
+
+        private void btnAmp_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            miArbol.strRecorrido = "";
+
+            if (miRaiz == null)
+            {
+                lblAmp.Text = "El árbol está vacío.";
+                return;
+            }
+
+            miArbol.RecorrerPorNiveles(miRaiz, ref miArbol.strRecorrido);
+            lblAmp.Text = miArbol.strRecorrido.Trim(); // Muestra el recorrido en el label
+        }
+
+        private void btnAltu_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            int altura = miArbol.ObtenerAltura(miRaiz);
+            MessageBox.Show("Altura del árbol: " + altura);
+        }
+
+        private void btnConth_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            int cantidadHojas = miArbol.ContarHojas(miRaiz);
+            MessageBox.Show("Cantidad de hojas en el árbol: " + cantidadHojas);
+        }
+
+        private void btnNodarb_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            int cantidadNodos = miArbol.ContarNodos(miRaiz);
+            MessageBox.Show("Cantidad de nodos en el árbol: " + cantidadNodos);
+        }
+
+        private void btnComp_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            int cantidadNodos = miArbol.ContarNodos(miRaiz);
+            bool esCompleto = miArbol.EsCompleto(miRaiz, 0, cantidadNodos);
+
+            MessageBox.Show(esCompleto ? "El árbol es binario completo." : "El árbol no es binario completo.");
+        }
+
+        private void btnLlen_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            bool esLleno = miArbol.EsLleno(miRaiz);
+
+            MessageBox.Show(esLleno ? "El árbol es binario lleno." : "El árbol no es binario lleno.");
+        }
+
+        private void lblAmp_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,6 +1,4 @@
 ﻿
-using System;
-
 namespace EDDemo.Estructuras_No_Lineales
 {
     partial class frmArboles
@@ -47,27 +45,22 @@ namespace EDDemo.Estructuras_No_Lineales
             this.lblRecorridoInOrden = new System.Windows.Forms.Label();
             this.lblRecorridoPreOrden = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.DatoBuscar = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Busqueda = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnElmarb = new System.Windows.Forms.Button();
+            this.btnPrd = new System.Windows.Forms.Button();
+            this.btnSuce = new System.Windows.Forms.Button();
+            this.btnAmp = new System.Windows.Forms.Button();
+            this.lblAmp = new System.Windows.Forms.Label();
+            this.btnAltu = new System.Windows.Forms.Button();
+            this.btnConth = new System.Windows.Forms.Button();
+            this.btnNodarb = new System.Windows.Forms.Button();
+            this.btnComp = new System.Windows.Forms.Button();
+            this.btnLlen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDato
             // 
-            this.txtDato.Location = new System.Drawing.Point(77, 23);
+            this.txtDato.Location = new System.Drawing.Point(43, 15);
             this.txtDato.Margin = new System.Windows.Forms.Padding(2);
             this.txtDato.Multiline = true;
             this.txtDato.Name = "txtDato";
@@ -77,7 +70,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(152, 23);
+            this.btnAgregar.Location = new System.Drawing.Point(97, 17);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(62, 24);
@@ -91,21 +84,20 @@ namespace EDDemo.Estructuras_No_Lineales
             this.txtArbol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtArbol.BackColor = System.Drawing.Color.White;
             this.txtArbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArbol.Location = new System.Drawing.Point(6, 198);
+            this.txtArbol.Location = new System.Drawing.Point(8, 242);
             this.txtArbol.Margin = new System.Windows.Forms.Padding(2);
             this.txtArbol.Multiline = true;
             this.txtArbol.Name = "txtArbol";
             this.txtArbol.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtArbol.Size = new System.Drawing.Size(936, 407);
+            this.txtArbol.Size = new System.Drawing.Size(558, 301);
             this.txtArbol.TabIndex = 2;
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(247, 77);
+            this.btnLimpiar.Location = new System.Drawing.Point(486, 11);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(62, 24);
@@ -118,7 +110,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.btnGrafica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGrafica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrafica.Location = new System.Drawing.Point(247, 115);
+            this.btnGrafica.Location = new System.Drawing.Point(486, 50);
             this.btnGrafica.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Size = new System.Drawing.Size(62, 24);
@@ -130,10 +122,10 @@ namespace EDDemo.Estructuras_No_Lineales
             // btnRecorrer
             // 
             this.btnRecorrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecorrer.Location = new System.Drawing.Point(152, 98);
+            this.btnRecorrer.Location = new System.Drawing.Point(423, 177);
             this.btnRecorrer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRecorrer.Name = "btnRecorrer";
-            this.btnRecorrer.Size = new System.Drawing.Size(62, 26);
+            this.btnRecorrer.Size = new System.Drawing.Size(67, 32);
             this.btnRecorrer.TabIndex = 4;
             this.btnRecorrer.Text = "Recorrer";
             this.btnRecorrer.UseVisualStyleBackColor = true;
@@ -142,31 +134,29 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatos.Location = new System.Drawing.Point(12, 27);
+            this.lblDatos.Location = new System.Drawing.Point(6, 21);
             this.lblDatos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(61, 13);
+            this.lblDatos.Size = new System.Drawing.Size(36, 13);
             this.lblDatos.TabIndex = 5;
             this.lblDatos.Text = "Dato :";
-            this.lblDatos.Click += new System.EventHandler(this.lblDatos_Click);
             // 
             // btnCrearArbol
             // 
             this.btnCrearArbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearArbol.Location = new System.Drawing.Point(152, 55);
+            this.btnCrearArbol.Location = new System.Drawing.Point(118, 50);
             this.btnCrearArbol.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearArbol.Name = "btnCrearArbol";
             this.btnCrearArbol.Size = new System.Drawing.Size(62, 34);
             this.btnCrearArbol.TabIndex = 6;
-            this.btnCrearArbol.Text = "Crear Arbol";
+            this.btnCrearArbol.Text = "Crear Árbol";
             this.btnCrearArbol.UseVisualStyleBackColor = true;
             this.btnCrearArbol.Click += new System.EventHandler(this.btnCrearArbol_Click);
             // 
             // txtNodos
             // 
-            this.txtNodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNodos.Location = new System.Drawing.Point(75, 62);
+            this.txtNodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodos.Location = new System.Drawing.Point(40, 54);
             this.txtNodos.Margin = new System.Windows.Forms.Padding(2);
             this.txtNodos.Minimum = new decimal(new int[] {
             1,
@@ -186,7 +176,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.lblPostOrden.AutoSize = true;
             this.lblPostOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPostOrden.Location = new System.Drawing.Point(10, 178);
+            this.lblPostOrden.Location = new System.Drawing.Point(393, 154);
             this.lblPostOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPostOrden.Name = "lblPostOrden";
             this.lblPostOrden.Size = new System.Drawing.Size(70, 13);
@@ -196,7 +186,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblRecorridoPostOrden
             // 
             this.lblRecorridoPostOrden.AutoSize = true;
-            this.lblRecorridoPostOrden.Location = new System.Drawing.Point(80, 178);
+            this.lblRecorridoPostOrden.Location = new System.Drawing.Point(456, 154);
             this.lblRecorridoPostOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecorridoPostOrden.Name = "lblRecorridoPostOrden";
             this.lblRecorridoPostOrden.Size = new System.Drawing.Size(57, 13);
@@ -207,7 +197,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.lblInOrden.AutoSize = true;
             this.lblInOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInOrden.Location = new System.Drawing.Point(20, 154);
+            this.lblInOrden.Location = new System.Drawing.Point(404, 130);
             this.lblInOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInOrden.Name = "lblInOrden";
             this.lblInOrden.Size = new System.Drawing.Size(56, 13);
@@ -218,7 +208,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.lblPreOrden.AutoSize = true;
             this.lblPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreOrden.Location = new System.Drawing.Point(12, 128);
+            this.lblPreOrden.Location = new System.Drawing.Point(396, 104);
             this.lblPreOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPreOrden.Name = "lblPreOrden";
             this.lblPreOrden.Size = new System.Drawing.Size(64, 13);
@@ -228,7 +218,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblRecorridoInOrden
             // 
             this.lblRecorridoInOrden.AutoSize = true;
-            this.lblRecorridoInOrden.Location = new System.Drawing.Point(80, 154);
+            this.lblRecorridoInOrden.Location = new System.Drawing.Point(456, 130);
             this.lblRecorridoInOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecorridoInOrden.Name = "lblRecorridoInOrden";
             this.lblRecorridoInOrden.Size = new System.Drawing.Size(57, 13);
@@ -238,7 +228,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblRecorridoPreOrden
             // 
             this.lblRecorridoPreOrden.AutoSize = true;
-            this.lblRecorridoPreOrden.Location = new System.Drawing.Point(80, 128);
+            this.lblRecorridoPreOrden.Location = new System.Drawing.Point(456, 104);
             this.lblRecorridoPreOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecorridoPreOrden.Name = "lblRecorridoPreOrden";
             this.lblRecorridoPreOrden.Size = new System.Drawing.Size(57, 13);
@@ -247,207 +237,151 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(433, 21);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(118, 91);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(78, 24);
+            this.btnBuscar.Size = new System.Drawing.Size(62, 31);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // button1
+            // btnElmarb
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(333, 66);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 39);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Eliminar predecesor";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnElmarb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnElmarb.Location = new System.Drawing.Point(30, 84);
+            this.btnElmarb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnElmarb.Name = "btnElmarb";
+            this.btnElmarb.Size = new System.Drawing.Size(71, 37);
+            this.btnElmarb.TabIndex = 16;
+            this.btnElmarb.Text = "Eliminar Árbol";
+            this.btnElmarb.UseVisualStyleBackColor = true;
+            this.btnElmarb.Click += new System.EventHandler(this.btnElmarb_Click);
             // 
-            // DatoBuscar
+            // btnPrd
             // 
-            this.DatoBuscar.AutoSize = true;
-            this.DatoBuscar.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatoBuscar.Location = new System.Drawing.Point(231, 27);
-            this.DatoBuscar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DatoBuscar.Name = "DatoBuscar";
-            this.DatoBuscar.Size = new System.Drawing.Size(133, 13);
-            this.DatoBuscar.TabIndex = 17;
-            this.DatoBuscar.Text = "Dato a Buscar:";
-            this.DatoBuscar.Click += new System.EventHandler(this.label1_Click);
+            this.btnPrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrd.Location = new System.Drawing.Point(210, 19);
+            this.btnPrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrd.Name = "btnPrd";
+            this.btnPrd.Size = new System.Drawing.Size(92, 38);
+            this.btnPrd.TabIndex = 17;
+            this.btnPrd.Text = "Eliminar PREDECESOR";
+            this.btnPrd.UseVisualStyleBackColor = true;
+            this.btnPrd.Click += new System.EventHandler(this.btnPrd_Click);
             // 
-            // button2
+            // btnSuce
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(333, 115);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 39);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Eliminar sucesor";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSuce.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuce.Location = new System.Drawing.Point(306, 19);
+            this.btnSuce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuce.Name = "btnSuce";
+            this.btnSuce.Size = new System.Drawing.Size(92, 38);
+            this.btnSuce.TabIndex = 18;
+            this.btnSuce.Text = "Eliminar SUCESOR";
+            this.btnSuce.UseVisualStyleBackColor = true;
+            this.btnSuce.Click += new System.EventHandler(this.btnSuce_Click);
             // 
-            // Busqueda
+            // btnAmp
             // 
-            this.Busqueda.Location = new System.Drawing.Point(368, 21);
-            this.Busqueda.Margin = new System.Windows.Forms.Padding(2);
-            this.Busqueda.Multiline = true;
-            this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(52, 26);
-            this.Busqueda.TabIndex = 19;
-            this.Busqueda.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAmp.Location = new System.Drawing.Point(169, 207);
+            this.btnAmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAmp.Name = "btnAmp";
+            this.btnAmp.Size = new System.Drawing.Size(64, 31);
+            this.btnAmp.TabIndex = 19;
+            this.btnAmp.Text = "Amplitud";
+            this.btnAmp.UseVisualStyleBackColor = true;
+            this.btnAmp.Click += new System.EventHandler(this.btnAmp_Click);
             // 
-            // label2
+            // lblAmp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(523, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Arbol por Nivel:";
+            this.lblAmp.AutoSize = true;
+            this.lblAmp.Location = new System.Drawing.Point(247, 216);
+            this.lblAmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAmp.Name = "lblAmp";
+            this.lblAmp.Size = new System.Drawing.Size(47, 13);
+            this.lblAmp.TabIndex = 20;
+            this.lblAmp.Text = "Amplitud";
+            this.lblAmp.Click += new System.EventHandler(this.lblAmp_Click);
             // 
-            // label3
+            // btnAltu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(622, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "PostOrden";
+            this.btnAltu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltu.Location = new System.Drawing.Point(118, 130);
+            this.btnAltu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAltu.Name = "btnAltu";
+            this.btnAltu.Size = new System.Drawing.Size(62, 47);
+            this.btnAltu.TabIndex = 21;
+            this.btnAltu.Text = "Altura del Árbol";
+            this.btnAltu.UseVisualStyleBackColor = true;
+            this.btnAltu.Click += new System.EventHandler(this.btnAltu_Click);
             // 
-            // label4
+            // btnConth
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(523, 49);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Altura del Arbol:";
+            this.btnConth.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConth.Location = new System.Drawing.Point(31, 132);
+            this.btnConth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConth.Name = "btnConth";
+            this.btnConth.Size = new System.Drawing.Size(69, 35);
+            this.btnConth.TabIndex = 22;
+            this.btnConth.Text = "Conteo de Hojas";
+            this.btnConth.UseVisualStyleBackColor = true;
+            this.btnConth.Click += new System.EventHandler(this.btnConth_Click);
             // 
-            // label5
+            // btnNodarb
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(523, 73);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 13);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Hojas del Arbol:";
+            this.btnNodarb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNodarb.Location = new System.Drawing.Point(30, 177);
+            this.btnNodarb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNodarb.Name = "btnNodarb";
+            this.btnNodarb.Size = new System.Drawing.Size(71, 37);
+            this.btnNodarb.TabIndex = 23;
+            this.btnNodarb.Text = "Nodo del Árbol";
+            this.btnNodarb.UseVisualStyleBackColor = true;
+            this.btnNodarb.Click += new System.EventHandler(this.btnNodarb_Click);
             // 
-            // label6
+            // btnComp
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(625, 49);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "PostOrden";
+            this.btnComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComp.Location = new System.Drawing.Point(260, 87);
+            this.btnComp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnComp.Name = "btnComp";
+            this.btnComp.Size = new System.Drawing.Size(100, 32);
+            this.btnComp.TabIndex = 24;
+            this.btnComp.Text = "Árbol Completo";
+            this.btnComp.UseVisualStyleBackColor = true;
+            this.btnComp.Click += new System.EventHandler(this.btnComp_Click);
             // 
-            // label7
+            // btnLlen
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(624, 73);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "PostOrden";
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(474, 115);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 39);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Arbol por Nivel";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(579, 115);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 39);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Altura del Arbol";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(681, 115);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 39);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Hojas del Arbol";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(727, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Arbol Completo:";
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(730, 49);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 39);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Arbol Completo";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnLlen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLlen.Location = new System.Drawing.Point(260, 124);
+            this.btnLlen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLlen.Name = "btnLlen";
+            this.btnLlen.Size = new System.Drawing.Size(100, 32);
+            this.btnLlen.TabIndex = 25;
+            this.btnLlen.Text = "Árbol Lleno";
+            this.btnLlen.UseVisualStyleBackColor = true;
+            this.btnLlen.Click += new System.EventHandler(this.btnLlen_Click);
             // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(941, 495);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Busqueda);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.DatoBuscar);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(562, 504);
+            this.Controls.Add(this.btnLlen);
+            this.Controls.Add(this.btnComp);
+            this.Controls.Add(this.btnNodarb);
+            this.Controls.Add(this.btnConth);
+            this.Controls.Add(this.btnAltu);
+            this.Controls.Add(this.lblAmp);
+            this.Controls.Add(this.btnAmp);
+            this.Controls.Add(this.btnSuce);
+            this.Controls.Add(this.btnPrd);
+            this.Controls.Add(this.btnElmarb);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblRecorridoPreOrden);
             this.Controls.Add(this.lblRecorridoInOrden);
@@ -464,8 +398,6 @@ namespace EDDemo.Estructuras_No_Lineales
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtDato);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmArboles";
             this.Text = "frmArboles";
@@ -474,11 +406,6 @@ namespace EDDemo.Estructuras_No_Lineales
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void lblDatos_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
@@ -499,20 +426,15 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Label lblRecorridoInOrden;
         private System.Windows.Forms.Label lblRecorridoPreOrden;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label DatoBuscar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox Busqueda;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnElmarb;
+        private System.Windows.Forms.Button btnPrd;
+        private System.Windows.Forms.Button btnSuce;
+        private System.Windows.Forms.Button btnAmp;
+        private System.Windows.Forms.Label lblAmp;
+        private System.Windows.Forms.Button btnAltu;
+        private System.Windows.Forms.Button btnConth;
+        private System.Windows.Forms.Button btnNodarb;
+        private System.Windows.Forms.Button btnComp;
+        private System.Windows.Forms.Button btnLlen;
     }
 }
